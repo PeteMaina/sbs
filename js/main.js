@@ -23,3 +23,27 @@ window.addEventListener('scroll', () => {
         navbar.style.boxShadow = 'none';
     }
 });
+
+// Contact page specific interactions
+document.addEventListener('DOMContentLoaded', function() {
+    // Add click tracking for contact methods
+    const contactButtons = document.querySelectorAll('.contact-btn, .footer-section a');
+    contactButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const method = this.textContent.trim() || this.getAttribute('href');
+            console.log(`Contact method used: ${method}`);
+            // Here you could add analytics tracking
+        });
+    });
+
+    // Smooth scroll for roadmap section
+    const roadmapLinks = document.querySelectorAll('a[href="#roadmap"]');
+    roadmapLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('#roadmap').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+});
