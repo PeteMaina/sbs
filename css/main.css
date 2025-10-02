@@ -92,3 +92,31 @@ p {
 * {
     transition: all 0.3s ease;
 }
+
+/* === IMPROVED NAVBAR SPACING === */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #e5e7eb;
+    z-index: 1000;
+    padding: 1rem 0;
+}
+
+/* Adjust hero section to account for fixed navbar */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    position: relative;
+    overflow: hidden;
+    padding-top: 8rem; /* Added padding for fixed nav */
+}
+
+/* Ensure content doesn't hide behind navbar */
+.section:first-of-type {
+    scroll-margin-top: 8rem;
+}

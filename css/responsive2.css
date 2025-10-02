@@ -1,0 +1,101 @@
+/* === MOBILE FIRST RESPONSIVE DESIGN === */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    h1 {
+        font-size: 3.6rem;
+    }
+
+    h2 {
+        font-size: 2.8rem;
+    }
+
+    /* Navigation */
+    .nav-menu {
+        display: none;
+    }
+
+    .nav-container {
+        padding: 0rem 0;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 8rem 0 4rem;
+        min-height: auto;
+    }
+
+    .hero-title {
+        font-size: 4rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.8rem;
+    }
+*/
+    /* Sections */
+    .section {
+        padding: 6rem 0;
+    }
+
+    /* Grid Systems */
+    .features-grid,
+    .software-grid,
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    /* Cards */
+    .feature-card,
+    .software-card,
+    .pricing-tier {
+        padding: 3rem 2rem;
+    }
+
+    .pricing-tier.featured {
+        transform: none;
+    }
+
+    .pricing-tier.featured:hover {
+        transform: translateY(-5px);
+    }
+
+    /* Buttons */
+    .btn {
+        padding: 1.2rem 2.5rem;
+        font-size: 1.4rem;
+    }
+
+    .hero-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2.4rem;
+    }
+
+    p {
+        font-size: 1.6rem;
+    }
+
+    .feature-card,
+    .software-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .card-price,
+    .tier-price {
+        font-size: 3rem;
+    }
+}

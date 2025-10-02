@@ -351,3 +351,78 @@
     border-radius: 50%;
     flex-shrink: 0;
 }
+
+/* === MAGICAL LOGO INTEGRATION === */
+.nav-container {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+}
+
+.magic-logo {
+    height: 50px;
+    width: 50px;
+    border-radius: 12px;
+    object-fit: contain;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid transparent;
+    background: linear-gradient(135deg, #667eea, #764ba2) border-box;
+    padding: 2px;
+}
+
+.magic-logo:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+/* Logo animation for attention */
+@keyframes logoGlow {
+    0%, 100% { filter: drop-shadow(0 0 5px rgba(102, 126, 234, 0.5)); }
+    50% { filter: drop-shadow(0 0 15px rgba(102, 126, 234, 0.8)); }
+}
+
+.magic-logo.glow {
+    animation: logoGlow 2s ease-in-out infinite;
+}
+
+/* Mobile-specific logo styles */
+@media (max-width: 768px) {
+    .nav-container {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .magic-logo {
+        height: 40px;
+        width: 40px;
+    }
+    
+    .logo {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+    
+    .magic-logo {
+        height: 35px;
+        width: 35px;
+    }
+    
+    .logo {
+        font-size: 1.8rem;
+    }
+}
